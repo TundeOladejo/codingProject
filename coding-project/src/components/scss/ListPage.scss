@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+.list {
+  &-filter {
+    background-color: $primary;
+    border-radius: 10px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}

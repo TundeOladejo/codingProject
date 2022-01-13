@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+.mainpage {
+  .sidebar {
+    .list-group-item.active {
+      color: $brand-black !important;
+      background-color: $primary !important;
+      border-color: $primary !important;
+    }
+
+    @include media-breakpoint-down(
+      "md",
+      (
+        md: 768px,
+      )
+    ) {
+      .list-group-horizontal {
+        flex-direction: row !important;
+      }
+    }
+  }
+}

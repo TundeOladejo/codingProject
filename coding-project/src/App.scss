@@ -1,0 +1,60 @@
+@import "./components/scss/variables.scss";
+
+.App {
+  text-align: left;
+  background-color: $brand-white;
+  min-height: 100vh;
+
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  &-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $primary;
+  }
+
+  &-link {
+    color: $primary;
+  }
+
+  .hero {
+    padding-top: 50px;
+
+    &-label {
+      font-size: 54px;
+      font-weight: 700;
+    }
+    &-img {
+      display: block;
+      margin: auto;
+    }
+    @include media-breakpoint-down(
+      "md",
+      (
+        md: 768px,
+      )
+    ) {
+      padding-top: 10px;
+      &-img {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

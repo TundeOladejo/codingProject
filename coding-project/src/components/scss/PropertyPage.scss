@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.property {
+  &-filter {
+    background-color: $primary;
+    border-radius: 10px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}

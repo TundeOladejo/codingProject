@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+.primary-button {
+  border-radius: 10px;
+  background-color: $primary !important;
+  border-color: $primary !important;
+  padding: 10px 30px !important;
+  color: $brand-black !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.secondary-button {
+  @extend .primary-button;
+  padding: 6px 30px !important;
+}
+
+.outline {
+  background-color: $white !important;
+  border-color: $primary !important;
+}

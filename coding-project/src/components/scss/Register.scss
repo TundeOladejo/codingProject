@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+.register {
+  padding-top: 10%;
+
+  .card {
+    margin: auto;
+    width: 50%;
+  }
+
+  &-input {
+    border-color: $primary !important;
+  }
+
+  &__forgot-password {
+    color: $brand-orange;
+  }
+}
