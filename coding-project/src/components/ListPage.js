@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 import "./scss/ListPage.scss";
 import { Link } from "react-router-dom";
+import ViewProperty from "./ViewProperty";
 import {
   Row,
   Col,
@@ -9,10 +11,42 @@ import {
   Button,
   Card,
   Container,
+  Modal,
 } from "react-bootstrap";
 
 function ListPage() {
-  const properties = [{}];
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const listProperties = [
+    {
+      id: 1,
+      title: "Ajayi Properties",
+      details: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    },
+    {
+      id: 2,
+      title: "Muniru Properties",
+      details: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    },
+    {
+      id: 3,
+      title: "Raven Holdings",
+      details: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    },
+    {
+      id: 4,
+      title: "Alexander Homes Ltd.",
+      details: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    },
+    {
+      id: 5,
+      title: "Lekan Properties",
+      details: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+    },
+  ];
+
   return (
     <div className="list">
       <Breadcrumb>
@@ -36,29 +70,34 @@ function ListPage() {
 
       <Container>
         <Row xs={1} md={3} className="g-4 mt-5">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <Col>
+          {listProperties.map((listProperty, index) => (
+            <Col key={listProperty.id}>
               <Card>
                 <Card.Img variant="top" src="./assets/home.svg" />
-                <Card.Body>
+                <Card.Body className="text-center">
                   <Card.Title>
                     <Link
                       className="card-title stretched-link"
                       to="/Dashboard#link1"
+                      onClick={handleShow}
                     >
-                      Card Title
+                      {listProperty.title}
                     </Link>
                   </Card.Title>
-                  <Card.Text>
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </Card.Text>
+                  <Card.Text>{listProperty.details}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <ViewProperty onClick={handleClose} />
+        </Modal>
       </Container>
     </div>
   );

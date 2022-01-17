@@ -8,18 +8,18 @@ function AddNew({ onClick }) {
       </Modal.Header>
       <Modal.Body>
         <Form>
-          <Form.Group className="mb-3" controlId="formGridAddress1">
+          <Form.Group className="mb-3" controlId="propertyName">
             <Form.Label>Property Name</Form.Label>
             <Form.Control placeholder="Vegas Realities" />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formGridAddress1">
+          <Form.Group className="mb-3" controlId="propertyAddress">
             <Form.Label>Property Address</Form.Label>
             <Form.Control placeholder="No 12, Ajanlekoko st" />
           </Form.Group>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="exampleForm.ControlTextarea1">
+            <Form.Group as={Col} controlId="propertyType">
               <Form.Label>Property Type</Form.Label>
               <Form.Select aria-label="Default select example">
                 <option>Select an option</option>
@@ -30,49 +30,49 @@ function AddNew({ onClick }) {
               </Form.Select>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="bedroomsNum">
               <Form.Label>Number of Bedrooms</Form.Label>
               <Form.Control type="number" value="0" />
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="sittingroomNum">
               <Form.Label>Number of sitting rooms</Form.Label>
               <Form.Control type="number" value="0" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="kitchenNum">
               <Form.Label>Number of kitchen</Form.Label>
               <Form.Control type="number" value="0" />
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="bathroomNum">
               <Form.Label>Number of bathroom</Form.Label>
               <Form.Control type="number" value="0" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="toiletNum">
               <Form.Label>Number of toilet</Form.Label>
               <Form.Control type="number" value="0" />
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="validFrom">
               <Form.Label>Valid From</Form.Label>
               <Form.Control type="date" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Group as={Col} controlId="validTo">
               <Form.Label>Valid To</Form.Label>
               <Form.Control type="date" />
             </Form.Group>
           </Row>
 
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Group className="mb-3" controlId="description">
             <Form.Label>Description</Form.Label>
             <Form.Control as="textarea" rows={2} />
           </Form.Group>
