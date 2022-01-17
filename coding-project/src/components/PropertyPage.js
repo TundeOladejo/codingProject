@@ -44,8 +44,8 @@ function PropertyPage() {
         <Table striped bordered hover responsive>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Property Name</th>
+              <th>S/N</th>
+              <th>Property Company</th>
               <th>Property Address</th>
               <th>Action</th>
             </tr>

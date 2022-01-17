@@ -1,4 +1,5 @@
 import "./scss/ListPage.scss";
+import { Link } from "react-router-dom";
 import {
   Row,
   Col,
@@ -11,6 +12,7 @@ import {
 } from "react-bootstrap";
 
 function ListPage() {
+  const properties = [{}];
   return (
     <div className="list">
       <Breadcrumb>
@@ -22,7 +24,7 @@ function ListPage() {
       <div className="mb-3 list-filter">
         <span className="list-filter-title">Available Properties</span>
         <span>
-          <i className="bi bi-sliders px-1"></i>custom filter
+          <i className="bi bi-sliders px-1 text-bold"></i>custom filter
         </span>
       </div>
       <div className="d-flex justify-content-between">
@@ -39,7 +41,14 @@ function ListPage() {
               <Card>
                 <Card.Img variant="top" src="./assets/home.svg" />
                 <Card.Body>
-                  <Card.Title>Card title</Card.Title>
+                  <Card.Title>
+                    <Link
+                      className="card-title stretched-link"
+                      to="/Dashboard#link1"
+                    >
+                      Card Title
+                    </Link>
+                  </Card.Title>
                   <Card.Text>
                     This is a longer card with supporting text below as a
                     natural lead-in to additional content. This content is a

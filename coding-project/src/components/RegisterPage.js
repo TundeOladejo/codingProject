@@ -22,6 +22,7 @@ function RegisterPage() {
                   type="email"
                   className="register-input"
                   placeholder="Enter email"
+                  required
                 />
               </Form.Group>
 
@@ -31,6 +32,7 @@ function RegisterPage() {
                   type="password"
                   className="register-input"
                   placeholder="Password"
+                  required
                 />
               </Form.Group>
               <div className="d-flex justify-content-center">

@@ -1,21 +1,8 @@
-import React, { useState } from "react";
 import { Container, Row, Card, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./scss/Register.scss";
 
 function Login() {
-  const [validated, setValidated] = useState(false);
-
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  };
-
   return (
     <Container fluid className="register">
       <Row className="text-center">
@@ -28,11 +15,7 @@ function Login() {
       <Row>
         <Card style={{ width: "30rem" }}>
           <Card.Body>
-            <Form
-              className="py-4"
-              validated={validated}
-              onSubmit={handleSubmit}
-            >
+            <Form className="py-4">
               <Form.Group className="mb-3" controlId="validationCustom03">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
@@ -60,7 +43,6 @@ function Login() {
                 >
                   Login
                 </Link>
-                {/* <Button type="submit">Submit form</Button> */}
               </div>
               <Form.Text>forgot password? Click here!</Form.Text>
             </Form>

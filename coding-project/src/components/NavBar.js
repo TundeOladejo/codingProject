@@ -1,6 +1,5 @@
 import "./scss/Button.scss";
 import { Link } from "react-router-dom";
-
 import { Navbar, Container } from "react-bootstrap";
 
 function NavBar({ linkText, destination }) {
